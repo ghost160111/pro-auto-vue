@@ -1,6 +1,5 @@
 <template>
-  <article class="about">
-  </article>
+  <article class="about"></article>
 </template>
 
 <script></script>
