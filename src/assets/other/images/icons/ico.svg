@@ -1,0 +1,17 @@
+<svg width="132" height="81" viewBox="0 0 132 81" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="ico">
+<rect id="Rectangle 7" x="2" y="32.7273" width="85.6552" height="46.2727" stroke="white" stroke-width="4"/>
+<path id="Rectangle 12" d="M93.2414 59.4545H120C125.523 59.4545 130 54.9774 130 49.4546V12C130 6.47715 125.523 2 120 2H50.3448C44.822 2 40.3448 6.47716 40.3448 12V27.1364" stroke="white" stroke-width="4"/>
+<path id="Ellipse 5" d="M59.8621 55.8636C59.8621 64.1818 53.1284 70.9205 44.8276 70.9205C36.5268 70.9205 29.7931 64.1818 29.7931 55.8636C29.7931 47.5455 36.5268 40.8068 44.8276 40.8068C53.1284 40.8068 59.8621 47.5455 59.8621 55.8636Z" stroke="white" stroke-opacity="0.5" stroke-width="4"/>
+<path id="Rectangle 8" d="M42.3448 48.8864H46.6136C48.4839 48.8864 50 50.4025 50 52.2727C50 54.143 48.4839 55.6591 46.6136 55.6591H42.3448V48.8864Z" stroke="white" stroke-width="4"/>
+<rect id="Rectangle 9" x="36.7586" y="54.0682" width="7.17241" height="3.59091" fill="white"/>
+<rect id="Rectangle 11" x="36.7586" y="59.4545" width="15.2414" height="3.59091" fill="white"/>
+<rect id="Rectangle 10" x="40.3448" y="46.8864" width="3.58621" height="18.8523" fill="white"/>
+<path id="Vector 4" d="M69.0345 39.7045H80.6897V54.0682" stroke="white" stroke-opacity="0.5" stroke-width="4"/>
+<path id="Vector 5" d="M20.6207 72.0227H8.96552V57.6591" stroke="white" stroke-opacity="0.5" stroke-width="4"/>
+<path id="Vector 6" d="M8.96551 54.0682V46.8864" stroke="white" stroke-opacity="0.5" stroke-width="4"/>
+<path id="Union" fill-rule="evenodd" clip-rule="evenodd" d="M110.276 50.441C108.946 51.583 107.219 52.2727 105.331 52.2727C101.13 52.2727 97.7241 48.8563 97.7241 44.642C97.7241 40.4277 101.13 37.0114 105.331 37.0114C107.219 37.0114 108.946 37.7011 110.276 38.843C111.606 37.7011 113.333 37.0114 115.22 37.0114C119.422 37.0114 122.828 40.4277 122.828 44.642C122.828 48.8563 119.422 52.2727 115.22 52.2727C113.333 52.2727 111.606 51.583 110.276 50.441Z" fill="white"/>
+<rect id="Rectangle 13" x="42.1379" y="11.875" width="86.069" height="4.48864" fill="white" fill-opacity="0.5"/>
+<rect id="Rectangle 14" x="42.1379" y="19.9546" width="86.069" height="4.48864" fill="white" fill-opacity="0.5"/>
+</g>
+</svg>

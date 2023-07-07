@@ -18220,12 +18220,23 @@ progress {
   --vw-min-px: 1024px;
   --vw-max: 1920;
   /* Base spaces */
+  /* Project colors */
+  --red1: #C53720;
+  --red2: #D42E12;
+  --black: #000000;
+  --black2: #0E0E0E;
+  --black3: #1D1D1D;
+  --light-grey1: #C4C4C4;
+  --light-grey2: #EDEDED;
+  /* End */
+  /* Project layout values */
+  --width100: 100%;
+  /* End */
   /* Base colors */
   --white: #ffffff;
   --red1: #C53720;
   --red2: #D42E12;
   --white-rgb: 255, 255, 255;
-  --black: #000000;
   --black-rgb: 0, 0, 0;
   --lighten: #a5a5a5;
   --darken: #212121;
@@ -18744,7 +18755,8 @@ body {
   overflow: hidden;
   overflow-y: auto;
   font-feature-settings: "pnum" on, "lnum" on;
-  background: var(--white);
+  background: var(--black);
+  color: var(--white);
 }
 body .v-application {
   font-family: var(--f1);
@@ -19359,12 +19371,14 @@ select:-webkit-autofill:focus {
 .header {
   display: flex;
   position: fixed;
-  background-color: var(--black);
+  background: none;
   font-size: 1.25rem;
   line-height: 1.5rem;
   min-width: 100%;
+  min-height: 6.25rem;
   z-index: 1000;
-  box-shadow: 0.3125rem 0.3125rem 3.125rem var(--black);
+  -webkit-backdrop-filter: brightness(60%);
+  backdrop-filter: brightness(60%);
 }
 .header ul,
 .header ol {
@@ -19386,6 +19400,7 @@ select:-webkit-autofill:focus {
   padding-top: 1rem;
   padding-bottom: 1rem;
   min-width: 100%;
+  height: 100%;
   color: var(--white);
   padding: 0rem calc(50% - 51.25rem);
   padding-left: 1rem;
@@ -19546,11 +19561,12 @@ select:-webkit-autofill:focus {
   line-height: 1.875rem;
   transition: all 0.5s ease;
   width: 100%;
+  color: var(--white);
 }
 .nav-link:hover {
   border-bottom: 0.1875rem solid box-shadow animation;
   animation: infinite-logo 10s infinite linear;
-  color: var(--red);
+  color: var(--red2);
 }
 @media only screen and (max-width: 767.98px) {
   .nav-link {
@@ -19561,8 +19577,8 @@ select:-webkit-autofill:focus {
 }
 
 .logo {
-  max-height: 2.375rem;
-  max-width: 2.375rem;
+  max-height: 3.625rem;
+  max-width: 8.25rem;
 }
 .logo:hover {
   transition: all 0.5s ease;
@@ -19658,6 +19674,120 @@ select:-webkit-autofill:focus {
 
 .main {
   min-height: 38.28125rem;
+}
+
+.home-intro {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  min-width: var(--width100);
+  min-height: 41.625rem;
+  padding-top: 6.25rem;
+  background-image: url("/src/assets/other/images/backgrounds/background.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.home {
+  display: block;
+  min-height: 41.625rem;
+  min-width: var(--width100);
+}
+
+.home-info {
+  min-height: 17rem;
+  min-width: var(--width100);
+  background-color: var(--black2);
+  color: var(--white);
+}
+
+.home-info-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 0.75rem;
+}
+
+.list-block {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 20rem;
+  min-height: 18.75rem;
+}
+.list-block::before, .list-block::after {
+  content: "";
+}
+.list-block::before {
+  position: absolute;
+  left: 0rem;
+  top: 0rem;
+  width: 0;
+  height: 0;
+  border-top: 4.6875rem solid var(--black2);
+  border-right: 4.6875rem solid transparent;
+}
+.list-block::after {
+  position: relative;
+  left: 7.75rem;
+  top: 0rem;
+  width: 0;
+  height: 0;
+  border-bottom: 4.6875rem solid var(--black2);
+  border-left: 4.6875rem solid transparent;
+}
+.list-block:hover {
+  background-color: var(--red2);
+}
+
+.list-link {
+  color: var(--black2);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.list-top,
+.list-bottom {
+  width: 100%;
+}
+
+.list-top {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 9.375rem;
+  padding-top: 2.5rem;
+}
+
+.list-bottom {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 calc(50% - 7.5rem);
+  min-height: 3.125rem;
+}
+
+.list-label {
+  padding-top: 1.5625rem;
+  text-align: center;
+  padding-bottom: 0.75rem;
+}
+
+.list-arrow {
+  position: relative;
+  top: 1.375rem;
+  min-height: 1.334375rem;
+  min-width: 3.1875rem;
 }
 
 .scroll-top {

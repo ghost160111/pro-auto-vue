@@ -1,15 +1,102 @@
 .home {
-    display: block;
+  display: block;
+  min-height: rem(666);
+  min-width: var(--width100);
 }
 
-.home-intro {
-    display: flex;
-    flex-flow: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-wrap: nowrap;
+.home-info {
+  min-height: rem(272);
+  min-width: var(--width100);
+  background-color: var(--black2);
+  color: var(--white);
+}
 
-    background: {
-        color: var(--black);
-    }
+.home-info-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: rem(12);
+}
+
+.list-block {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: rem(320);
+  min-height: rem(300);
+
+  &::before,
+  &::after {
+    content: "";
+  }
+
+  &::before {
+    position: absolute;
+    left: rem(0);
+    top: rem(0);
+    width: 0;
+    height: 0;
+    border-top: rem(75) solid var(--black2);
+    border-right: rem(75) solid transparent;
+  }
+
+  &::after {
+    position: relative;
+    left: rem(124);
+    top: rem(0);
+    width: 0;
+    height: 0;
+    border-bottom: rem(75) solid var(--black2);
+    border-left: rem(75) solid transparent;
+  }
+
+  &:hover {
+    background-color: var(--red2);
+  }
+}
+
+.list-link {
+  color: var(--black2);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.list-top,
+.list-bottom {
+  width: 100%;
+}
+
+.list-top {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: rem(150);
+  padding-top: rem(40);
+}
+
+.list-bottom {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 calc(50% - rem(120));
+  min-height: rem(50);
+}
+
+.list-label {
+  padding-top: rem(25);
+  text-align: center;
+  padding-bottom: rem(12);
+}
+
+.list-arrow {
+  position: relative;
+  top: rem(22);
+  min-height: rem(21.35);
+  min-width: rem(51);
 }

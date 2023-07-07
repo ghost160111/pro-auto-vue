@@ -1,0 +1,17 @@
+.home-intro {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+
+    min-width: var(--width100);
+    min-height: rem(666);
+    padding-top: rem(100);
+
+    background-image: url("/src/assets/other/images/backgrounds/background.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-attachment: fixed;
+}
