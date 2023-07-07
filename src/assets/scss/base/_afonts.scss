@@ -1,0 +1,26 @@
+@each $font, $textWeight, $weight in ($font, '-200', 200), ($font, '-300', 300),
+  ($font, '-regular', 400), ($font, '-500', 500), ($font, '-600', 600), ($font, '-700', 700),
+  ($font, '-800', 800), ($font, '-900', 900)
+{
+  @font-face {
+    font-family: $font;
+    font-style: normal;
+    font-weight: $weight;
+    font-display: swap;
+    src: url('/src/assets/other/fonts/#{$font}#{$textWeight}.woff2') format('woff2'),
+      url('/src/assets/other/fonts/#{$font}#{$textWeight}.woff') format('woff');
+  }
+}
+
+@each $font, $textWeight, $weight in ($font2, '-500', 500), ($font2, '-600', 600),
+  ($font2, '-700', 700)
+{
+  @font-face {
+    font-family: $font;
+    font-style: normal;
+    font-weight: $weight;
+    font-display: swap;
+    src: url('/src/assets/other/fonts/#{$font}#{$textWeight}.woff2') format('woff2'),
+      url('/src/assets/other/fonts/#{$font}#{$textWeight}.woff') format('woff');
+  }
+}

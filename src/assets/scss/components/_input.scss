@@ -1,0 +1,99 @@
+.g-input {
+  //all: unset;
+  height: var(--btn-height);
+  display: flex;
+  align-items: center;
+  padding-left: rem(16);
+  padding-right: rem(16);
+  background: var(--darken);
+  border: 1px solid var(--darken2);
+  color: var(--white);
+  border-radius: 8px;
+  min-width: 100%;
+  transition: box-shadow var(--animation);
+
+  font-style: normal;
+  font-weight: 300;
+  font-size: rem(18);
+
+  &--font {
+    font-weight: 600;
+  }
+
+  &::placeholder {
+    color: rgba(white, 0.3);
+  }
+
+  /*&:-moz-autofill {
+    -webkit-box-shadow: inset 0 0 0 70px transparent;
+    -webkit-text-fill-color: var(--c6);
+  }
+
+  &:-webkit-autofill {
+    -webkit-box-shadow: inset 0 0 0 70px transparent;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &:-internal-autofill-selected {
+    box-shadow: 0 0 3px 1px rgba(black, 0.5);
+    -webkit-text-fill-color: var(--c5);
+  }*/
+
+  &[readonly] {
+    background-color: #e2ecf4;
+    color: rgba(82, 86, 102, 0.4);
+  }
+
+  &.input-error {
+    border: 2px solid red;
+  }
+
+  &[disabled] {
+    background-color: #d2d2d2;
+    opacity: 0.4;
+    cursor: no-drop;
+  }
+
+  &:focus {
+    box-shadow: 0 0 3px 1px rgba(var(--white-rgb), 0.15);
+  }
+  //-webkit-text-fill-color: #838B95 !important;
+}
+
+textarea.g-input {
+  padding-top: rem(11);
+  min-height: rem(150);
+}
+
+.arrow-select,
+select {
+  --move: 5px;
+  --size: 4px;
+  --color: currentColor;
+
+  appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, var(--color) 50%),
+    linear-gradient(135deg, var(--color) 50%, transparent 50%);
+  background-position: calc(100% - calc(calc(18px + var(--size)) + var(--move))) calc(50% - 0px),
+    calc(100% - calc(18px + var(--move))) calc(50% - 0px), calc(100% - 2.4em) 0.4em;
+  background-size: var(--size) var(--size), var(--size) var(--size), 1px 1.5em;
+  background-repeat: no-repeat;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border-bottom: 1px solid white;
+  background: none;
+  -webkit-text-fill-color: var(--white) !important;
+  -webkit-box-shadow: none;
+  -webkit-box-shadow: transparent !important;
+  -webkit-transition: color 9999s ease-out, background-color 9999s ease-out;
+}
+

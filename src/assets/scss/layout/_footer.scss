@@ -1,0 +1,40 @@
+.footer {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.footer-wrapper {
+  display: flex;
+  padding-top: 2rem;
+}
+
+.f-right {
+  width: 30%;
+}
+
+.f-right-list {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.f-right-developed-by {
+  display: flex;
+  flex-flow: column;
+}
+
+.f-left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 50%;
+}
+
+.f-left-list {
+  width: 50%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  padding-left: 10%;
+}

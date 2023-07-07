@@ -1,0 +1,124 @@
+@import '../plugins/vuetify/variables';
+
+$base-fz: 16;
+
+$k4: 3200px;
+$k2: 2500px;
+$notebook-view: 1366px;
+$tablet-view: 1280px;
+$mobile-view: 639px;
+
+$md-and-down: map-get($display-breakpoints, 'md-and-down');
+$md-and-up: map-get($display-breakpoints, 'md-and-up');
+$sm-and-down: map-get($display-breakpoints, 'sm-and-down');
+$smOnly: map-get($display-breakpoints, 'sm-only');
+$sm-and-up: map-get($display-breakpoints, 'sm-and-up');
+$smAndDown: map-get($display-breakpoints, 'sm-and-down');
+$xsOnly: map-get($display-breakpoints, 'xs-only');
+$lg-and-up: map-get($display-breakpoints, 'lg-and-up');
+$lg-and-down: map-get($display-breakpoints, 'lg-and-down');
+
+$font: 'inter';
+$font2: 'manrope';
+
+$green: #00b533;
+
+:root {
+  --scroll-width: 0px;
+
+  /* Base font-size */
+  --base-fz: 16;
+
+  --f-min: 12;
+  --f-min-px: 12px;
+  --f-max: 16;
+
+  --vw-min: 1024;
+  --vw-min-px: 1024px;
+  --vw-max: 1920;
+
+  /* Base spaces */
+  //@include spaces(19.2, vw);
+
+  /* Base colors */
+  --white: #ffffff;
+  --red1: #C53720;
+  --red2: #D42E12;
+  --white-rgb: 255, 255, 255;
+  --black: #000000;
+  --black-rgb: 0, 0, 0;
+  --lighten: #a5a5a5;
+  --darken: #212121;
+  --darken2: #464646;
+  --darken3: #2a2a2a;
+  --darken4: #292929;
+  --darken-rgb: 33, 33, 33;
+  --text-color: #161313;
+  --scroll-color: #8d8d8d;
+
+  --green: #{$green};
+  --light-text: #afafaf;
+  --bg-color: #212b36;
+  --dialog-bg: #323d49;
+
+  --btn-height: #{rem(56)};
+  --btn-width: #{rem(105)};
+  --header-height: #{rem(50)};
+
+  --animation: 0.3s ease;
+  --global-animation: all 0.3s ease;
+
+  --f1: #{$font}, sans-serif;
+  --f2: #{$font2}, sans-serif;
+
+  @media (max-width: $tablet-view) {
+    /* Base font-size */
+    --base-fz: 16;
+
+    --f-min: 12;
+    --f-min-px: 12px;
+    --f-max: 16;
+
+    --vw-min: 768;
+    --vw-min-px: 768px;
+    --vw-max: 1280;
+
+    --header-height: 80px;
+  }
+
+  @media (max-width: $mobile-view), (max-height: 500px) {
+    /* Base font-size */
+    --base-fz: 14;
+
+    --f-min: 14;
+    --f-min-px: 14px;
+    --f-max: 14;
+
+    --vw-min: 360;
+    --vw-min-px: 360px;
+    --vw-max: 768;
+
+    /* Base spaces */
+    //@include spaces(2, px);
+  }
+}
+
+$fw: 400;
+$fz: 1rem;
+$lh: 1.5;
+$ff: $font, 'Arial', 'Helvetica Neue', 'sans-serif';
+
+$headers: (
+  h1: 34,
+  // px
+  h2: 28,
+  // px
+  h3: 24,
+  // px
+  h4: 18,
+  // px
+  h5: 14,
+  // px
+  h6: 12,
+  // px
+);

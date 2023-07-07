@@ -1,0 +1,28 @@
+@keyframes html-load-anim {
+  from {
+    filter: brightness(0);
+  }
+  to {
+    filter: brightness(1);
+  }
+}
+
+@keyframes random-animation {
+  0% {
+    filter: blur(0) opacity(1);
+    transform: matrix(rem(1), rem(25), rem(12), rem(20), rem(8))
+      translate(rem(25), rem(25), rem(25)) rotateX(0deg) rotateY(30deg) rotateZ(60deg);
+  }
+  25% {
+    filter: blur(rem(25)) opacity(0.75);
+  }
+  50% {
+    filter: blur(rem(50)) opacity(0.5);
+  }
+  75% {
+    filter: blur(rem(25)) opacity(0.75);
+  }
+  100% {
+    filter: blur(0) opacity(1);
+  }
+}

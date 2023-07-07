@@ -1,0 +1,100 @@
+html {
+  overflow: visible !important;
+
+  &::-webkit-scrollbar {
+    background-color: transparent;
+    width: rem(10);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    //background-color: var(--scroll-color);
+    background-color: var(--black);
+  }
+}
+
+body {
+  min-height: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+  background: var(--white);
+
+  & .v-application {
+    font-family: var(--f1);
+  }
+
+  & .theme--light.v-application {
+    color: var(--text-color);
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--f2);
+  line-height: 1.5;
+  font-weight: 500;
+  color: inherit;
+  margin: {
+    top: 0;
+    bottom: var(--space-25);
+  }
+}
+
+b {
+  font-weight: 700;
+}
+
+.svg-wrap {
+  line-height: 0;
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: #e0e0e0;
+  margin-top: var(--space-30);
+  margin-bottom: var(--space-40);
+}
+
+textarea {
+  font-family: var(--f1);
+}
+
+.layout-enter-active,
+.layout-leave-active,
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.15s;
+}
+
+.layout-enter,
+.layout-leave-active,
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+  overflow: hidden;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s;
+}
+
+.fade-enter, .fade-leave-to /* .fade-leave-active до версии 2.1.8 */ {
+  opacity: 0;
+  overflow: hidden;
+}
+
+button:focus:not(.focus-visible) {
+  outline: 5px auto -webkit-focus-ring-color;
+}

@@ -1,0 +1,40 @@
+{
+  "gallery": [
+    "https://www.javascripttutorial.net/wp-content/uploads/2021/04/JavaScript-Tutorial.svg",
+    "https://www.javascripttutorial.net/wp-content/uploads/2021/04/JavaScript-Tutorial.svg",
+    "https://www.javascripttutorial.net/wp-content/uploads/2021/04/JavaScript-Tutorial.svg",
+    "https://www.javascripttutorial.net/wp-content/uploads/2021/04/JavaScript-Tutorial.svg",
+    "https://www.javascripttutorial.net/wp-content/uploads/2021/04/JavaScript-Tutorial.svg"
+  ],
+  "vueDirectives": [
+    ["v-bind", "Connects an attribute in an HTML tag to a data variable inside the Vue instance."],
+    [
+      "v-if",
+      "Creates HTML tags depending on a condition. Directives v-else-if and v-else are used together with the v-if directive."
+    ],
+    ["v-show", "Specifies if an HTML element should be visible or not depending on a condition."],
+    ["v-for", "Creates a list of tags based on an array in the Vue instance using a for-loop."],
+    [
+      "v-on",
+      "Connects an event on an HTML tag to a JavaScript expression or a Vue instance method. We can also define more specifically how our page should react to a certain event by using event-modifiers."
+    ],
+    [
+      "v-model",
+      "Used in HTML forms with tags like <form>, <input> and <button>. Creates a two way binding between an input element and a Vue instance data property."
+    ]
+  ],
+  "tutorials": [
+    {
+      "title": "Vue.js - Directives",
+      "descriptions": [
+        "Vue directives are special HTML attributes with the prefix v- that give the HTML tag extra functionality.",
+        "Vue directives connect to the Vue instance to create dynamic and reactive user interfaces.",
+        "With Vue, creating responsive pages is much easier and requires less code compared to traditional JavaScript methods."
+      ]
+    },
+    {
+      "title": "Vue.js - v-if directive",
+      "descriptions": []
+    }
+  ]
+}

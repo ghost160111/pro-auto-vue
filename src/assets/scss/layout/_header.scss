@@ -1,0 +1,325 @@
+.flex-center-row {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-center-column {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  position: fixed;
+  background-color: var(--black);
+  font-size: rem(20);
+  line-height: rem(24);
+  min-width: 100%;
+  z-index: 1000;
+  box-shadow: rem(5) rem(5) rem(50) var(--black);
+
+  ul,
+  ol {
+    list-style: none;
+    margin: 0;
+  }
+}
+
+.header-wrapper {
+  display: block;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.nav {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: rem(16);
+  padding-bottom: rem(16);
+  min-width: 100%;
+  color: var(--white);
+  padding: rem(0) calc(50% - rem(820));
+  padding-left: rem(16);
+  padding-right: rem(16);
+
+  @media #{$sm-and-down} {
+    padding-right: 0;
+  }
+}
+
+.nav-left,
+.nav-right {
+  @extend .flex-center-row;
+}
+
+.nav-list {
+  @extend .flex-center-row;
+  column-gap: rem(25);
+  padding-right: rem(25);
+  flex-wrap: wrap;
+  height: 100%;
+  transition: var(--global-animation);
+
+  &::-webkit-scrollbar {
+    background-color: transparent;
+    width: rem(10);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    //background-color: var(--scroll-color);
+    background-color: var(--black);
+  }
+
+  @media screen and (min-width: rem(960)) {
+    display: flex !important;
+  }
+
+  @media #{$sm-and-down} {
+    position: fixed;
+    left: 0;
+    top: rem(50);
+    padding: 0;
+    overflow-y: scroll;
+
+    flex-flow: column;
+    justify-content: flex-start;
+
+    box-shadow: rem(5) rem(5) rem(35) var(--white);
+    padding-top: rem(100);
+    //transform: translateX(rem(1250));
+    transform: scaleX(0);
+    filter: opacity(0);
+    background-color: var(--black);
+
+    min-width: 100%;
+    height: vh(918);
+
+    li {
+      display: block;
+      width: 100%;
+      .router-link-active {
+        border: rem(1) solid var(--red);
+      }
+      .nav-link {
+        width: 100%;
+        padding: 0;
+      }
+    }
+
+    &::-webkit-scrollbar {
+      background-color: transparent;
+      width: rem(10);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      //background-color: var(--scroll-color);
+      background-color: var(--black);
+    }
+  }
+
+  @media #{$smOnly} {
+    transform: translate(rem(-2000));
+    box-shadow: rem(5) rem(5) rem(150) var(--black);
+    filter: opacity(0);
+    min-width: 30%;
+    height: vh(918);
+    overflow-y: scroll;
+
+    li {
+      display: block;
+      width: 100%;
+      .router-link-active {
+        border: rem(2) solid var(--red);
+      }
+      .nav-link {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        padding-left: rem(30);
+        color: var(--white);
+      }
+    }
+
+    &::-webkit-scrollbar {
+      background-color: transparent;
+      width: rem(10);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      //background-color: var(--scroll-color);
+      background-color: var(--white);
+    }
+  }
+}
+
+.nav-on {
+  display: block;
+  filter: opacity(1);
+  transition: var(--global-animation);
+  animation: anim-opacity 0.5s ease;
+}
+
+.nav-off {
+  display: none;
+  filter: opacity(0);
+  transition: var(--global-animation);
+  animation: anim-opacity 0.5s ease;
+}
+
+.nav-list-on {
+  display: none;
+  animation: translate-anim 0.5s ease;
+  transition: var(--global-animation);
+  cursor: pointer;
+
+  min: {
+    width: rem(50);
+    height: rem(50);
+  }
+
+  z-index: 100;
+
+  &.active {
+    & > .nav-on {
+      display: none;
+      filter: opacity(0);
+    }
+
+    & > .nav-off {
+      display: block;
+      filter: opacity(1);
+    }
+
+    & + .nav-list {
+      display: flex;
+      filter: opacity(1);
+      //transition: all 0.5s ease;
+
+      @media #{$sm-and-down} {
+        //transform: translate(rem(0));
+        transform: scaleX(1);
+        filter: opacity(1);
+      }
+
+      @media #{$smOnly} {
+        filter: opacity(1);
+      }
+    }
+  }
+
+  @media #{$sm-and-down} {
+    display: block;
+  }
+}
+
+.nav-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: rem(20);
+  font-weight: 400;
+  line-height: rem(30);
+  transition: all 0.5s ease;
+  width: 100%;
+
+  &:hover {
+    border-bottom: rem(3) solid box-shadow animation;
+    animation: infinite-logo 10s infinite linear;
+    color: var(--red);
+  }
+
+  @media #{$sm-and-down} {
+    font-size: rem(30);
+    line-height: rem(40);
+    padding-left: 30%;
+  }
+}
+
+@mixin on-load-animation($translateX: rem(150), $translateY: rem(150), $rotateX: 10deg, $time: 1s) {
+  @keyframes translate-anim {
+    from {
+      transform: scale(0) translate($translateX, $translateY) rotateX($rotateX);
+    }
+    to {
+      transform: scale(1) translate(rem(0), rem(0)) rotateX(0deg);
+    }
+  }
+  animation: translate-anim $time ease;
+}
+
+.logo {
+  //@include on-load-animation(rem(150), rem(150), 15deg, 2s);
+  max: {
+    height: rem(38);
+    width: rem(38);
+  }
+
+  &:hover {
+    transition: all 0.5s ease;
+    animation: infinite-logo 10s infinite linear;
+  }
+}
+
+@keyframes anim-opacity {
+  from {
+    filter: opacity(0);
+    transform: scaleY(0);
+  }
+  to {
+    filter: opacity(1);
+    transform: scaleY(1);
+  }
+}
+
+@keyframes pop-left {
+  from {
+    transform: translate(rem(-1250));
+  }
+
+  to {
+    transform: translate(rem(0));
+  }
+}
+
+@keyframes nav-on {
+  from {
+    transform: translate(rem(-1025));
+  }
+
+  to {
+    transform: translate(rem(0));
+  }
+}
+
+@keyframes infinite-logo {
+  0% {
+    box-shadow: rem(5) rem(5) rem(35) var(--red);
+  }
+
+  30% {
+    box-shadow: rem(5) rem(5) rem(80) var(--red);
+  }
+
+  60% {
+    box-shadow: rem(5) rem(5) rem(40) var(--red);
+  }
+
+  80% {
+    box-shadow: rem(5) rem(5) rem(65) var(--red);
+  }
+
+  90% {
+    box-shadow: rem(5) rem(5) rem(25) var(--red);
+  }
+
+  100% {
+    box-shadow: rem(5) rem(5) rem(35) var(--red);
+  }
+}
