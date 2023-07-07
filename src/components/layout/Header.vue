@@ -67,7 +67,7 @@
                   <circle cx="17" cy="31" r="3" stroke="white" stroke-width="4" />
                   <circle cx="28" cy="31" r="3" stroke="white" stroke-width="4" />
                 </svg>
-                <span class="cart-qty">0</span>
+                <span class="cart-qty">{{ cardQty }}</span>
               </router-link>
             </li>
           </ul>
@@ -82,6 +82,7 @@ export default {
   data() {
     return {
       title: 'Pro-auto - Надежные аккумуляторы',
+      cardQty: 0,
       showMenu: false,
       showMenuClass: 'nav-list-on',
       btn: document.querySelector('.nav-list-on'),
