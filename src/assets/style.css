@@ -18745,9 +18745,10 @@ html {
 html::-webkit-scrollbar {
   background-color: transparent;
   width: 0.625rem;
+  box-shadow: 0.25rem 0.25rem 0.1875rem var(--red2);
 }
 html::-webkit-scrollbar-thumb {
-  background-color: var(--black);
+  background-color: var(--red1);
 }
 
 body {
@@ -19220,7 +19221,7 @@ a.g-btn--full-width,
   font-weight: 600;
 }
 .g-input::placeholder {
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(var(--white), 0.3);
 }
 .g-input[readonly] {
   background-color: #e2ecf4;
@@ -19303,7 +19304,7 @@ select:-webkit-autofill:focus {
 }
 .notification-dialog.error.popup {
   filter: opacity(1);
-  transform: translateY(0);
+  transform: translateX(-12.5rem) translateY(4.375rem);
 }
 @media only screen and (max-width: 767.98px) {
   .notification-dialog.error {
@@ -19495,16 +19496,13 @@ select:-webkit-autofill:focus {
   .nav-list {
     transform: translate(-125rem);
     filter: opacity(0);
-    min-width: 30%;
+    min-width: 50%;
     height: 94.6391752577vh;
     overflow-y: scroll;
     box-shadow: 0.3125rem 0.3125rem 2.1875rem var(--red2);
   }
   .nav-list li {
     width: 100%;
-  }
-  .nav-list li .router-link-active {
-    border: 0.125rem solid var(--red);
   }
   .nav-list li .nav-link {
     display: flex;
@@ -19514,27 +19512,46 @@ select:-webkit-autofill:focus {
     padding-left: 1.875rem;
     color: var(--white);
   }
+  .nav-list li.search {
+    justify-content: space-between;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767.98px) and (max-width: 767.98px) {
+  .nav-list li.search {
+    justify-content: center;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
   .nav-list::-webkit-scrollbar {
     background-color: transparent;
     width: 0.625rem;
   }
+}
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
   .nav-list::-webkit-scrollbar-thumb {
     background-color: var(--white);
   }
+}
+@media screen and (max-width: 300px) {
+  .nav-list li {
+    transform: scale(0.8);
+  }
+}
+
+.nav-on,
+.nav-off {
+  transition: var(--global-animation);
+  animation: anim-opacity 0.5 ease;
 }
 
 .nav-on {
   display: block;
   filter: opacity(1);
-  transition: var(--global-animation);
-  animation: anim-opacity 0.5s ease;
 }
 
 .nav-off {
   display: none;
   filter: opacity(0);
-  transition: var(--global-animation);
-  animation: anim-opacity 0.5s ease;
 }
 
 .nav-list-on {
@@ -19557,6 +19574,7 @@ select:-webkit-autofill:focus {
 .nav-list-on.active + .nav-list {
   display: flex;
   filter: opacity(1);
+  transition: all 0.5s ease;
 }
 @media only screen and (max-width: 767.98px) {
   .nav-list-on.active + .nav-list {
@@ -19589,7 +19607,11 @@ select:-webkit-autofill:focus {
 .nav-link:hover {
   border-bottom: 0.1875rem solid box-shadow animation;
   animation: infinite-logo 10s infinite linear;
-  color: var(--red2);
+  color: var(--red2) !important;
+  transition: var(--global-animation);
+}
+.nav-link:focus {
+  color: var(--white);
 }
 @media only screen and (max-width: 767.98px) {
   .nav-link {
@@ -19599,13 +19621,17 @@ select:-webkit-autofill:focus {
   }
 }
 
+.router-link-active {
+  border-bottom: 0.0625rem solid var(--red2);
+}
+
 .logo {
   max-height: 3.625rem;
   max-width: 8.25rem;
+  transition: var(--global-animation);
 }
 .logo:hover {
   animation: translate-anim 0.5s ease;
-  transition: all 0.5s ease;
   animation: infinite-logo 10s infinite linear;
 }
 @keyframes translate-anim {
@@ -19619,9 +19645,54 @@ select:-webkit-autofill:focus {
 
 .search-svg {
   cursor: pointer;
+  z-index: 100;
 }
 .search-svg:hover {
   filter: opacity(0.5);
+}
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  .search-svg {
+    order: 1;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .search-svg {
+    order: 1;
+  }
+}
+
+.g-input.search {
+  position: absolute;
+  transform: translateX(-625rem);
+  min-width: 15.625rem;
+  max-height: 2.5rem;
+}
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  .g-input.search {
+    position: relative;
+    min-width: 90%;
+    order: 0;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .g-input.search {
+    position: relative;
+    width: 90%;
+    order: 0;
+  }
+}
+.g-input.search.active {
+  transform: translateX(-10.625rem);
+}
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  .g-input.search.active {
+    transform: translateX(0);
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .g-input.search.active {
+    transform: translateX(0);
+  }
 }
 
 @keyframes anim-opacity {

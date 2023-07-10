@@ -21,7 +21,7 @@
   }
 
   &::placeholder {
-    color: rgba(white, 0.3);
+    color: rgba(var(--white), 0.3);
   }
 
   /*&:-moz-autofill {

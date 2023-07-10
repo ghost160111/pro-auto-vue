@@ -4,11 +4,12 @@ html {
   &::-webkit-scrollbar {
     background-color: transparent;
     width: rem(10);
+    box-shadow: rem(4) rem(4) rem(3) var(--red2);
   }
 
   &::-webkit-scrollbar-thumb {
     //background-color: var(--scroll-color);
-    background-color: var(--black);
+    background-color: var(--red1);
   }
 }
 

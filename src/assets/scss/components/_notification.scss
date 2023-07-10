@@ -33,7 +33,8 @@
 
     &.popup {
       filter: opacity(1);
-      transform: translateY(0);
+      transform: translateX(rem(-200)) 
+                 translateY(rem(70));
     }
 
     @media #{$sm-and-down} {

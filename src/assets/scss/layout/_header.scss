@@ -1,3 +1,15 @@
+@mixin on-load-animation($translateX: rem(150), $translateY: rem(150), $rotateX: 10deg, $time: 1s) {
+  @keyframes translate-anim {
+    from {
+      transform: scale(0) translate($translateX, $translateY) rotateX($rotateX);
+    }
+    to {
+      transform: scale(1) translate(rem(0), rem(0)) rotateX(0deg);
+    }
+  }
+  animation: translate-anim $time ease;
+}
+
 .flex-center-row {
   display: flex;
   flex-flow: row;
@@ -135,16 +147,14 @@
   @media #{$smOnly} {
     transform: translate(rem(-2000));
     filter: opacity(0);
-    min-width: 30%;
+    min-width: 50%;
     height: vh(918);
     overflow-y: scroll;
     box-shadow: rem(5) rem(5) rem(35) var(--red2);
 
     li {
       width: 100%;
-      .router-link-active {
-        border: rem(2) solid var(--red);
-      }
+
       .nav-link {
         display: flex;
         justify-content: flex-start;
@@ -152,6 +162,14 @@
         width: 100%;
         padding-left: rem(30);
         color: var(--white);
+      }
+
+      &.search {
+        justify-content: space-between;
+
+        @media #{$sm-and-down} {
+          justify-content: center;
+        }
       }
     }
 
@@ -165,20 +183,28 @@
       background-color: var(--white);
     }
   }
+
+  @media screen and (max-width: 300px) {
+    li {
+      transform: scale(0.8);
+    }
+  }
+}
+
+.nav-on,
+.nav-off {
+  transition: var(--global-animation);
+  animation: anim-opacity 0.5 ease;
 }
 
 .nav-on {
   display: block;
   filter: opacity(1);
-  transition: var(--global-animation);
-  animation: anim-opacity 0.5s ease;
 }
 
 .nav-off {
   display: none;
   filter: opacity(0);
-  transition: var(--global-animation);
-  animation: anim-opacity 0.5s ease;
 }
 
 .nav-list-on {
@@ -208,7 +234,7 @@
     & + .nav-list {
       display: flex;
       filter: opacity(1);
-      //transition: all 0.5s ease;
+      transition: all 0.5s ease;
 
       @media #{$sm-and-down} {
         //transform: translate(rem(0));
@@ -241,7 +267,12 @@
   &:hover {
     border-bottom: rem(3) solid box-shadow animation;
     animation: infinite-logo 10s infinite linear;
-    color: var(--red2);
+    color: var(--red2) !important;
+    transition: var(--global-animation);
+  }
+
+  &:focus {
+    color: var(--white);
   }
 
   @media #{$sm-and-down} {
@@ -251,16 +282,8 @@
   }
 }
 
-@mixin on-load-animation($translateX: rem(150), $translateY: rem(150), $rotateX: 10deg, $time: 1s) {
-  @keyframes translate-anim {
-    from {
-      transform: scale(0) translate($translateX, $translateY) rotateX($rotateX);
-    }
-    to {
-      transform: scale(1) translate(rem(0), rem(0)) rotateX(0deg);
-    }
-  }
-  animation: translate-anim $time ease;
+.router-link-active {
+  border-bottom: rem(1) solid var(--red2);
 }
 
 .logo {
@@ -268,19 +291,61 @@
     height: rem(58);
     width: rem(132);
   }
+  transition: var(--global-animation);
 
   &:hover {
     @include on-load-animation(rem(150), rem(150), 15deg, 0.5s);
-    transition: all 0.5s ease;
     animation: infinite-logo 10s infinite linear;
   }
 }
 
 .search-svg {
   cursor: pointer;
+  z-index: 100;
 
   &:hover {
     filter: opacity(0.5);
+  }
+
+  @media #{$smOnly} {
+    order: 1;
+  }
+
+  @media #{$sm-and-down} {
+    order: 1;
+  }
+}
+
+.g-input {
+  &.search {
+    position: absolute;
+    transform: translateX(rem(-10000));
+    min-width: rem(250);
+    max-height: rem(40);
+
+    @media #{$smOnly} {
+      position: relative;
+      min-width: 90%;
+      order: 0;
+    }
+
+    @media #{$sm-and-down} {
+      position: relative;
+      width: 90%;
+      order: 0;
+    }
+  }
+
+  &.search.active {
+    transform: translateX(rem(-170));
+
+    @media #{$smOnly} {
+      transform: translateX(0);
+    }
+
+    @media #{$sm-and-down} {
+      transform: translateX(0);
+    }
   }
 }
 
