@@ -50,22 +50,22 @@ export default {
       inputText: 'default input text',
       list: [
         {
-          "image-link": "https://pro-auto-vue-zjjb.vercel.app/src/assets/other/images/icons/ico.svg",
+          "image-link": "src/assets/other/images/icons/ico.svg",
           "label": "Наличный и безналичный расчет"
         },
         {
-          "image-link": "https://pro-auto-vue-zjjb.vercel.app/src/assets/other/images/icons/ico2.svg",
+          "image-link": "src/assets/other/images/icons/ico2.svg",
           "label": "Техническая помощь и консультация"
         },
         {
-          "image-link": "https://pro-auto-vue-zjjb.vercel.app/src/assets/other/images/icons/ico3.svg",
+          "image-link": "src/assets/other/images/icons/ico3.svg",
           "label": "Только качественная и проверенная продукция",
-          "arrow": "https://pro-auto-vue-zjjb.vercel.app/src/assets/other/images/icons/Union.svg"
+          "arrow": "src/assets/other/images/icons/Union.svg"
         },
         {
-          "image-link": "https://pro-auto-vue-zjjb.vercel.app/src/assets/other/images/icons/ico4.svg",
+          "image-link": "src/assets/other/images/icons/ico4.svg",
           "label": "Мы всегда на связи с 9:00 до 18:00!",
-          "arrow": "https://pro-auto-vue-zjjb.vercel.app/src/assets/other/images/icons/Union.svg"
+          "arrow": "src/assets/other/images/icons/Union.svg"
         }
       ]
     }
