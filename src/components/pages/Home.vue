@@ -40,6 +40,9 @@
 import home from '../../assets/data/pages/home.json'
 
 export default {
+  name: 'Home',
+  components: {
+  },
   data() {
     return {
       home,

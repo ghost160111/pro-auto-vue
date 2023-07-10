@@ -1,0 +1,12 @@
+li.search {
+
+}
+
+.search-svg {
+  cursor: pointer;
+  z-index: 100;
+
+  &:hover {
+    filter: opacity(0.5);
+  }
+}
