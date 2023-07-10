@@ -1,14 +1,12 @@
 .g-input {
-  //all: unset;
   height: var(--btn-height);
   display: flex;
   align-items: center;
   padding-left: rem(16);
   padding-right: rem(16);
-  background: var(--darken);
-  border: 1px solid var(--darken2);
-  color: var(--white);
-  border-radius: 8px;
+  background: var(--white);
+  color: var(--black);
+  border-radius: 3px;
   min-width: 100%;
   transition: var(--global-animation);
 
@@ -55,7 +53,7 @@
   }
 
   &:hover {
-    border: rem(1) solid var(--red2);
+    border-color: var(--red2);
   }
 
   &:focus {

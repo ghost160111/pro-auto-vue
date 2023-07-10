@@ -7,8 +7,7 @@ a.g-btn,
   text-align: center;
   min-height: var(--btn-height);
   min-width: var(--btn-width);
-  padding: rem(16) rem(32);
-  border-radius: rem(8);
+  padding: rem(12) rem(32);
   background-color: none;
   border: rem(4) solid var(--red2);
   color: var(--white);
@@ -25,7 +24,8 @@ a.g-btn,
 
   &[href]:hover,
   &:hover {
-    background-color: darken($green, 10%);
+    color: var(--red2);
+    box-shadow: rem(0) rem(0) rem(45) var(--red2);
   }
 
   &[href]:active,

@@ -1,14 +1,6 @@
 <template>
   <article class="home">
-    <section class="home-intro">
-      <button class="g-btn">Hello</button>
-      <input class="g-input"
-             type="text"
-             v-model="test_inputText"
-             :placeholder="test_inputText"
-      />
-      <p>{{ test_inputText }}</p>
-    </section>
+    <Intro />
     <div class="home-info">
       <ul class="home-info-list">
         <li v-for="(card, i) in home['list']" :key="i">
@@ -38,10 +30,12 @@
 
 <script>
 import home from '../../assets/data/pages/home.json'
+import Intro from '../sub-comps/Intro.vue'
 
 export default {
   name: 'Home',
   components: {
+    Intro
   },
   data() {
     return {

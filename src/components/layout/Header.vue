@@ -5,12 +5,19 @@
       <nav class="nav">
         <div class="nav-left">
           <a href="/">
-            <img v-bind:on-loadeddata="on_data_load" id="logo" class="logo" src="../../assets/other/images/logos/logo.svg"
-              alt="logo" />
+            <img v-bind:on-loadeddata="on_data_load" 
+                 id="logo" 
+                 class="logo" 
+                 src="../../assets/other/images/logos/logo.svg"
+                 alt="logo"
+            />
           </a>
         </div>
         <div class="nav-right">
-          <button @click="toggleMenu" v-bind:class="showMenuClass" type="button">
+          <button @click="toggleMenu" 
+                  v-bind:class="showMenuClass" 
+                  type="button"
+          >
             <svg class="nav-on" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
               <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -52,24 +59,12 @@
           </button>
           <ul class="nav-list">
             <li><router-link @click="toggleMenu" to="/" class="nav-link">Компания</router-link></li>
-            <li>
-              <router-link @click="toggleMenu" to="/catalog" class="nav-link">Каталог</router-link>
-            </li>
-            <li>
-              <router-link @click="toggleMenu" to="/service" class="nav-link">Услуги</router-link>
-            </li>
-            <li>
-              <router-link @click="toggleMenu" to="/about" class="nav-link">Информация</router-link>
-            </li>
-            <li>
-              <router-link @click="toggleMenu" to="/contacts" class="nav-link">Контакты</router-link>
-            </li>
-            <li>
-              <router-link @click="toggleMenu" to="/order-call" class="nav-link order-call">Заказать звонок</router-link>
-            </li>
-            <li>
-              <Search />
-            </li>
+            <li><router-link @click="toggleMenu" to="/catalog" class="nav-link">Каталог</router-link></li>
+            <li><router-link @click="toggleMenu" to="/service" class="nav-link">Услуги</router-link></li>
+            <li><router-link @click="toggleMenu" to="/about" class="nav-link">Информация</router-link></li>
+            <li><router-link @click="toggleMenu" to="/contacts" class="nav-link">Контакты</router-link></li>
+            <li><router-link @click="toggleMenu" to="/order-call" class="nav-link red-border">Заказать звонок</router-link></li>
+            <li class="search"><Search /></li>
             <li>
               <router-link @click="toggleMenu" to="/cart" class="nav-link cart">
                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
@@ -90,7 +85,7 @@
 </template>
 
 <script>
-import Search from '../Search.vue'
+import Search from '../sub-comps/Search.vue'
 
 export default {
   name: 'Header',
@@ -102,19 +97,13 @@ export default {
       title: 'Pro-auto - Надежные аккумуляторы',
       cardQty: 0,
       showMenu: false,
-      showMenuClass: 'nav-list-on',
-      btn: document.querySelector('.nav-list-on'),
-      list: document.querySelector('.nav-list'),
-      links: document.querySelectorAll('.nav-link'),
-      searchValue: '',
-      searchBtnClass: 'g-input search',
-      hiddenDialogClass: 'notification-dialog error'
+      showMenuClass: 'nav-list-on'
     }
   },
   methods: {
     toggleMenu() {
       try {
-        if ((this.showMenu = !this.showMenu)) {
+        if (this.showMenu = !this.showMenu) {
           this.showMenuClass += ' active'
         } else {
           this.showMenuClass = 'nav-list-on'

@@ -183,20 +183,18 @@
   }
 }
 
-.nav-on,
-.nav-off {
-  transition: var(--global-animation);
-  animation: anim-opacity 0.5 ease;
-}
-
 .nav-on {
   display: block;
   filter: opacity(1);
+  transition: all 0.5s ease;
+  animation: anim-opacity 0.5s ease;
 }
 
 .nav-off {
   display: none;
   filter: opacity(0);
+  transition: all 0.5s ease;
+  animation: anim-opacity 0.5s ease;
 }
 
 .nav-list-on {
@@ -272,10 +270,15 @@
     line-height: rem(40);
     padding-left: 30%;
   }
+
+  &.red-border {
+    border: rem(4) solid var(--red2);
+  }
 }
 
 .router-link-active {
-  border-bottom: rem(1) solid var(--red2);
+  border-bottom: rem(4) solid var(--red2);
+  transition: var(--global-animation);
 }
 
 .logo {
