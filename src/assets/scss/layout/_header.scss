@@ -79,6 +79,13 @@
     background-color: var(--black);
   }
 
+  li {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+  }
+
   @media screen and (min-width: rem(960)) {
     display: flex !important;
   }
@@ -86,15 +93,15 @@
   @media #{$sm-and-down} {
     position: fixed;
     left: 0;
-    top: rem(50);
+    top: rem(87.5);
     padding: 0;
     overflow-y: scroll;
 
     flex-flow: column;
     justify-content: flex-start;
 
-    box-shadow: rem(5) rem(5) rem(35) var(--white);
-    padding-top: rem(100);
+    box-shadow: rem(5) rem(5) rem(35) var(--red2);
+    padding-top: rem(25);
     //transform: translateX(rem(1250));
     transform: scaleX(0);
     filter: opacity(0);
@@ -104,7 +111,6 @@
     height: vh(918);
 
     li {
-      display: block;
       width: 100%;
       .router-link-active {
         border: rem(1) solid var(--red);
@@ -128,14 +134,13 @@
 
   @media #{$smOnly} {
     transform: translate(rem(-2000));
-    box-shadow: rem(5) rem(5) rem(150) var(--black);
     filter: opacity(0);
     min-width: 30%;
     height: vh(918);
     overflow-y: scroll;
+    box-shadow: rem(5) rem(5) rem(35) var(--red2);
 
     li {
-      display: block;
       width: 100%;
       .router-link-active {
         border: rem(2) solid var(--red);

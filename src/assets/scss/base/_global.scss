@@ -17,8 +17,8 @@ body {
   overflow: hidden;
   overflow-y: auto;
   font-feature-settings: 'pnum' on, 'lnum' on;
-  background: var(--black);
-  color: var(--white);
+  background: var(--black) !important;
+  color: var(--white) !important;
 
   & .v-application {
     font-family: var(--f1);
