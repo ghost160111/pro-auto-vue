@@ -1,7 +1,9 @@
 .notification-dialog {
+  position: absolute;
   font-weight: 500;
   font-size: rem(18);
   line-height: 1.5;
+  transition: var(--global-animation);
 
   // styling
   margin: 0 5px 5px;
@@ -26,6 +28,21 @@
   &.error {
     background: #e54d42;
     border-left-color: #b82e24;
+    filter: opacity(0);
+    transform: translateY(rem(-200));
+
+    &.popup {
+      filter: opacity(1);
+      transform: translateY(0);
+    }
+
+    @media #{$sm-and-down} {
+      transform: translateX(rem(-200));
+
+      &.popup {
+        transform: translateX(0);
+      }
+    }
   }
 
   &--custom {

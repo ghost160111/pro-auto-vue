@@ -10,7 +10,7 @@
   color: var(--white);
   border-radius: 8px;
   min-width: 100%;
-  transition: box-shadow var(--animation);
+  transition: var(--global-animation);
 
   font-style: normal;
   font-weight: 300;
@@ -52,6 +52,10 @@
     background-color: #d2d2d2;
     opacity: 0.4;
     cursor: no-drop;
+  }
+
+  &:hover {
+    border: rem(1) solid var(--red2);
   }
 
   &:focus {

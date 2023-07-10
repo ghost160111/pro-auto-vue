@@ -259,15 +259,23 @@
 }
 
 .logo {
-  //@include on-load-animation(rem(150), rem(150), 15deg, 2s);
   max: {
     height: rem(58);
     width: rem(132);
   }
 
   &:hover {
+    @include on-load-animation(rem(150), rem(150), 15deg, 0.5s);
     transition: all 0.5s ease;
     animation: infinite-logo 10s infinite linear;
+  }
+}
+
+.search-svg {
+  cursor: pointer;
+
+  &:hover {
+    filter: opacity(0.5);
   }
 }
 

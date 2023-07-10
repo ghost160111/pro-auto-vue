@@ -26,6 +26,7 @@
   align-items: center;
   width: rem(320);
   min-height: rem(300);
+  transition: var(--global-animation);
 
   &::before,
   &::after {
