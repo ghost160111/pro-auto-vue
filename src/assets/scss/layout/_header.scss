@@ -255,7 +255,7 @@
   color: var(--white);
 
   &:hover {
-    border-bottom: rem(3) solid box-shadow animation;
+    border-bottom: rem(3) solid animation;
     animation: infinite-logo 10s infinite linear;
     color: var(--red2) !important;
     transition: var(--global-animation);

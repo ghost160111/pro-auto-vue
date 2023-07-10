@@ -8,6 +8,7 @@
   min-width: var(--width100);
   min-height: rem(666);
   padding-top: rem(100);
+  padding-left: vw(100);
 
   background-image: url('/src/assets/other/images/backgrounds/background.png');
   background-repeat: no-repeat;
@@ -16,4 +17,14 @@
   background-clip: border-box;
 
   min-height: vh(720);
+}
+
+.home-intro-title {
+  padding: 0 calc(50% - rem(500));
+  padding-left: 0;
+  padding-right: rem(2182);
+  font-family: var(--f1);
+  font-weight: bold;
+  font-size: em(50);
+  line-height: em(20);
 }

@@ -51,6 +51,7 @@ export default {
         this.searchCompClass = 'search-component active'
       } else {
         this.searchCompClass = 'search-component'
+        this.hiddenDialogClass = 'notification-dialog error'
       }
     },
     searchInGoogle() {

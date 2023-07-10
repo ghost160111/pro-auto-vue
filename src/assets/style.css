@@ -19590,7 +19590,7 @@ select:-webkit-autofill:focus {
   color: var(--white);
 }
 .nav-link:hover {
-  border-bottom: 0.1875rem solid box-shadow animation;
+  border-bottom: 0.1875rem solid animation;
   animation: infinite-logo 10s infinite linear;
   color: var(--red2) !important;
   transition: var(--global-animation);
@@ -19732,12 +19732,23 @@ select:-webkit-autofill:focus {
   min-width: var(--width100);
   min-height: 41.625rem;
   padding-top: 6.25rem;
+  padding-left: 5.2083333333vw;
   background-image: url("/src/assets/other/images/backgrounds/background.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-clip: border-box;
   min-height: 74.2268041237vh;
+}
+
+.home-intro-title {
+  padding: 0 calc(50% - 31.25rem);
+  padding-left: 0;
+  padding-right: 136.375rem;
+  font-family: var(--f1);
+  font-weight: bold;
+  font-size: 3.125em;
+  line-height: 1.25em;
 }
 
 .nav-list > li.search {

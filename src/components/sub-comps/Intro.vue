@@ -1,6 +1,11 @@
 <template>
   <section class="home-intro">
+    <br />
+    <br />
+    <br />
     <h2 class="home-intro-title">{{ toUpperTitle }}</h2>
+    <br />
+    <br />
     <router-link class="g-btn" to="/catalog">{{ toUpperLink }}</router-link>
   </section>
 </template>
@@ -32,5 +37,5 @@ export default {
 }
 </script>
 
-<style></style>
-
+<style>
+</style>

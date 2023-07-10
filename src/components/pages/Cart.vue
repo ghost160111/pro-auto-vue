@@ -1,6 +1,16 @@
 <template>
   <article class="cart">
-    
+    <ul>
+      <li v-for="(product, i) in products">
+        <div :id="product.id">
+          <img :src="product.productImageURL" :alt="product.productName" />
+          <h3>{{ product.productName }}</h3>
+          <span>{{ product.productPrice }}</span>
+          <input type="text" v-model="product.productPrice" :value="product.productPrice" />
+          <button type="button">Add to cart</button>
+        </div>
+      </li>
+    </ul>
   </article>
 </template>
 
@@ -12,6 +22,29 @@ export default {
       productName: '',
       productPrice: 0,
       productQty: 0,
+      products: [
+        {
+          id: 0,
+          productName: 'Carrot',
+          productQty: 0,
+          productPrice: 1.99,
+          productImageURL: 'https://imageURL'
+        },
+        {
+          id: 1,
+          productName: 'Tomato',
+          productQty: 0,
+          productPrice: 2.99,
+          productImageURL: 'https://imageURL'
+        },
+        {
+          id: 2,
+          productName: 'Potato',
+          productQty: 0,
+          productPrice: 0.99,
+          productImageURL: 'https://imageURL'
+        }
+      ],
       cart: []
     }
   },
