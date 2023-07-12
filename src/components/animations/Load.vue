@@ -10,6 +10,8 @@
 
 <script>
 export default {
+  name: 'Loading',
+  components: {},
   methods: {
     loading() {
       try {

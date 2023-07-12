@@ -6,7 +6,7 @@
       <main class="main">
         <div class="main-wrapper">
           <router-view></router-view>
-          <button @click="scroll_top()" class="scroll-top add-task" type="button">Top</button>
+          <button class="scroll-top add-task" @scroll="scrollingEvent()" @click="scroll_top()" type="button">Top</button>
         </div>
       </main>
       <FooterComp />
@@ -26,6 +26,11 @@ export default {
     FooterComp,
     Load
   },
+  data() {
+    return {
+      hiddenClass: false
+    }
+  },
   methods: {
     scroll_top() {
       window.scrollTo({
@@ -33,7 +38,21 @@ export default {
         left: 0,
         behavior: 'smooth'
       })
+    },
+    scrollingEvent() {
+      window.addEventListener('scroll', () => {
+        if (window.scrollY === 0) {
+          this.hiddenClass = true
+          console.log('Scroll hidden')
+        } else {
+          this.hiddenClass = false
+          console.log('Scroll is not hidden')
+        }
+      })
     }
+  },
+  computed: {
+
   }
 }
 </script>

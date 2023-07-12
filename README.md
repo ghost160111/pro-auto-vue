@@ -33,3 +33,30 @@ npm run build
 ```sh
 npm run lint
 ```
+
+### Adding font awesome package
+
+1. Add SVG Core
+
+```sh
+npm i --save @fortawesome/fontawesome-svg-core
+```
+
+2. Add Icon Packages
+
+```sh
+npm i --save @fortawesome/free-solid-svg-icons
+npm i --save @fortawesome/free-regular-svg-icons
+npm i --save @fortawesome/free-brands-svg-icons
+```
+
+3. Add the Vue Component
+
+```sh
+# for Vue 2.x
+npm i --save @fortawesome/vue-fontawesome@latest-2
+
+# for Vue 3.x
+npm i --save @fortawesome/vue-fontawesome@latest-3
+```
+

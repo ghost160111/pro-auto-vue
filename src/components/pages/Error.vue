@@ -7,7 +7,11 @@
 
 <script>
 export default {
-  name: 'Error-Page'
+  name: 'Error-Page',
+  components: {},
+  data() {
+    return {}
+  }
 }
 </script>
 

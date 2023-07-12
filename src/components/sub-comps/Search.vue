@@ -37,6 +37,8 @@
 
 <script>
 export default {
+  name: 'Search',
+  components: {},
   data() {
     return {
       searchValue: '',

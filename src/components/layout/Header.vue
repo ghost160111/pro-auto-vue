@@ -66,7 +66,7 @@
             <li><router-link @click="toggleMenu" to="/order-call" class="nav-link red-border">Заказать звонок</router-link></li>
             <li class="search"><Search /></li>
             <li>
-              <router-link @click="toggleMenu" to="/cart" class="nav-link cart">
+              <router-link @click="toggleMenu" to="/cart" class="nav-link">
                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
                   <path d="M14 11H33.3599L29.9849 23H14V11Z" stroke="white" stroke-width="4" />
                   <path d="M14 4L14 24.5" stroke="white" stroke-width="4" />

@@ -12,6 +12,8 @@
 
 <script>
 export default {
+  name: 'Intro',
+  components: {},
   data() {
     return {
       title: 'Надежные, качественные аккумуляторы',
