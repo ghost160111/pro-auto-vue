@@ -19678,47 +19678,6 @@ select:-webkit-autofill:focus {
     box-shadow: 0.3125rem 0.3125rem 2.1875rem var(--red);
   }
 }
-.footer {
-  background-color: var(--black);
-  color: var(--white);
-}
-
-.footer-wrapper {
-  display: flex;
-  padding-top: 2rem;
-}
-
-.f-right {
-  width: 30%;
-}
-
-.f-right-list {
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.f-right-developed-by {
-  display: flex;
-  flex-flow: column;
-}
-
-.f-left {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  width: 50%;
-}
-
-.f-left-list {
-  width: 50%;
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  padding-left: 10%;
-}
-
 .main {
   min-height: 38.28125rem;
 }
@@ -19747,7 +19706,7 @@ select:-webkit-autofill:focus {
   padding-right: 136.375rem;
   font-family: var(--f1);
   font-weight: bold;
-  font-size: 3.125em;
+  font-size: large;
   line-height: 1.25em;
 }
 
