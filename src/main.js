@@ -1,5 +1,5 @@
 // main .css file
-import './assets/style.css'
+import './assets/scss/style.scss';
 
 // vue imports
 import { createApp } from 'vue'
