@@ -2,7 +2,7 @@
   <article class="cart">
     <Intro />
     <ul class="cart-list">
-      <li v-for="(product, i) in products">
+      <li v-for="(product, i) in products" :key="i">
         <div class="actual-cart" :id="product.id">
           <img class="cart-image" :src="product.productImageURL" :alt="product.productName" />
           <h3 class="cart-type">{{ product.productName }}</h3>
